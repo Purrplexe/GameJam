@@ -107,7 +107,7 @@ public class MovementIsMyIdeal : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("HidingSpot"))
+        if (collision.CompareTag("HidingSpot"))
         {
             canHide = true;
             Debug.Log("In");
@@ -115,7 +115,7 @@ public class MovementIsMyIdeal : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("HidingSpot"))
+        if (collision.CompareTag("HidingSpot"))
         {
             canHide = false;
             Debug.Log("Out");

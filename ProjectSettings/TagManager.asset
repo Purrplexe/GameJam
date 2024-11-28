@@ -10,6 +10,7 @@ TagManager:
   - BadItem
   - timerText
   - Enemy
+  - HidingSpot
   layers:
   - Default
   - TransparentFX
