@@ -10,6 +10,13 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     public float lineOfSightDist;
     public GameObject gotchaText;
+    public float minusPos;
+    public float plusPos;
+    public LineRenderer lineOfSightSight;
+    public Gradient redColor;
+    public Gradient greenColor;
+
+    public bool isFacingRight = true;
 
     private void Start()
     {
@@ -20,28 +27,41 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, lineOfSightDist);
+        RaycastHit2D hitInfo;
+        if (!isFacingRight)
+        {
+             hitInfo = Physics2D.Raycast(transform.position, transform.right, lineOfSightDist);
+        } else
+        {
+            hitInfo = Physics2D.Raycast(transform.position, transform.right*-1, lineOfSightDist);
+        }
+        
         if(hitInfo.collider != null)
         {
-            Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+            lineOfSightSight.colorGradient = redColor;
+            lineOfSightSight.SetPosition(1, hitInfo.point);
             if (hitInfo.collider.CompareTag("Player"))
             {
-
+                Debug.Log("Player Spotted");
+                //transform.position = hitInfo.point;
             }
         }
         else
         {
-            Debug.DrawLine(transform.position, transform.position + transform.right * lineOfSightDist,Color.green);
+            lineOfSightSight.colorGradient = greenColor;
+            lineOfSightSight.SetPosition(1, transform.position + -horizontalMrX * lineOfSightDist * transform.right);
         }
-        if (transform.position.x < -9f)
+        if (transform.position.x < minusPos)
         {
             horizontalMrX = 1f;
 
         }
-        else if (transform.position.x > 9)
+        else if (transform.position.x > plusPos)
         {
             horizontalMrX = -1f;
         }
+        lineOfSightSight.SetPosition(0, transform.position);
+        Flip();
     }
     private void FixedUpdate()
     {
@@ -59,6 +79,17 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.name.Equals("Player"))
         {
             gotchaText.SetActive(false);
+        }
+    }
+    private void Flip()
+    {
+        if (isFacingRight && horizontalMrX < 0f || !isFacingRight && horizontalMrX > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+            //lineOfSightSight.SetPosition(1, transform.position);
         }
     }
 }

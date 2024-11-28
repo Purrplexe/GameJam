@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
@@ -30,11 +31,13 @@ public class MovementIsMyIdeal : MonoBehaviour
     public SpriteRenderer rend;
     public bool canHide = false;
     public bool hiding = false;
+    public float speedHolder;
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
+        speedHolder = moveSpeed;
     }
     void Update()
     {
@@ -44,6 +47,7 @@ public class MovementIsMyIdeal : MonoBehaviour
             Physics2D.IgnoreLayerCollision(7, 8, true);
             rend.sortingOrder = -1;
             hiding = true;
+            moveSpeed = 0f;
             Debug.Log("f in the chat");
         }
         else
@@ -51,6 +55,7 @@ public class MovementIsMyIdeal : MonoBehaviour
             Physics2D.IgnoreLayerCollision(7, 8, false);
             rend.sortingOrder = 2;
             hiding = false;
+            moveSpeed = speedHolder;
         }
 
         if (Input.GetMouseButton(0))
@@ -92,6 +97,7 @@ public class MovementIsMyIdeal : MonoBehaviour
         if (!hiding)
         {
             //rb.velocity = new Vector2(horizontal,rb.velocity.y);
+            
             
         }
         else
