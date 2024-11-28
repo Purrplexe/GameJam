@@ -18,7 +18,7 @@ public class StartDialogue : MonoBehaviour
     {
         // Show the dialogue box at the start
         dialogueBox.SetActive(true);
-        dialogueText.text = "Ah, you're here! Show me how well you sort gifts... or else!";
+        dialogueText.text = "Who dares disturb my night? Do you know what I do to those who lie? To those who shirk their tasks. Show me if you truly know the difference between truth and deceit, between diligence and neglect. Fail, and I shall take my payment another way!";
     }
 
     public void StartGame()

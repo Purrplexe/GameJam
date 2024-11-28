@@ -126,12 +126,12 @@ TextureImporter:
       name: FrauAnimation_0
       rect:
         serializedVersion: 2
-        x: 348
-        y: 322
-        width: 328
-        height: 318
+        x: 0
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: FrauAnimation_1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 315
-        width: 329
-        height: 325
+        x: 320
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: FrauAnimation_2
       rect:
         serializedVersion: 2
-        x: 678
-        y: 322
-        width: 287
-        height: 317
+        x: 640
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: FrauAnimation_3
       rect:
         serializedVersion: 2
-        x: 964
-        y: 319
-        width: 331
-        height: 321
+        x: 960
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: FrauAnimation_4
       rect:
         serializedVersion: 2
-        x: 1293
+        x: 1280
         y: 320
-        width: 333
+        width: 320
         height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: FrauAnimation_5
       rect:
         serializedVersion: 2
-        x: 1624
-        y: 316
-        width: 323
-        height: 324
-      alignment: 9
-      pivot: {x: 0.45838797, y: 0.48179483}
+        x: 1600
+        y: 320
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: FrauAnimation_6
       rect:
         serializedVersion: 2
-        x: 1947
-        y: 322
-        width: 331
-        height: 318
+        x: 1920
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: FrauAnimation_7
       rect:
         serializedVersion: 2
-        x: 2279
-        y: 324
-        width: 327
-        height: 316
+        x: 2240
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: FrauAnimation_8
       rect:
         serializedVersion: 2
-        x: 19
-        y: 0
-        width: 331
-        height: 317
+        x: 2560
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: FrauAnimation_9
       rect:
         serializedVersion: 2
-        x: 350
-        y: 2
-        width: 324
-        height: 319
+        x: 0
+        y: 0
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: FrauAnimation_10
       rect:
         serializedVersion: 2
-        x: 675
+        x: 320
         y: 0
-        width: 292
+        width: 320
         height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: FrauAnimation_11
       rect:
         serializedVersion: 2
-        x: 968
+        x: 640
         y: 0
-        width: 325
-        height: 322
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: FrauAnimation_12
       rect:
         serializedVersion: 2
-        x: 1294
+        x: 960
         y: 0
-        width: 330
+        width: 320
         height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: FrauAnimation_13
       rect:
         serializedVersion: 2
-        x: 1624
+        x: 1280
         y: 0
-        width: 324
+        width: 320
         height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,12 +420,12 @@ TextureImporter:
       name: FrauAnimation_14
       rect:
         serializedVersion: 2
-        x: 1953
+        x: 1600
         y: 0
-        width: 325
-        height: 324
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,12 +441,12 @@ TextureImporter:
       name: FrauAnimation_15
       rect:
         serializedVersion: 2
-        x: 2279
+        x: 1920
         y: 0
-        width: 325
-        height: 322
+        width: 320
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,6 +454,48 @@ TextureImporter:
       bones: []
       spriteID: 3c132dfe65c58704683589e86b8225b7
       internalID: 1401411337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrauAnimation_16
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855fe09ac91f49d44bcc42c934c42f89
+      internalID: -317833501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrauAnimation_17
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9088963ff70dc48a634e7241cd997a
+      internalID: 1597876621
       vertices: []
       indices: 
       edges: []
@@ -477,6 +519,8 @@ TextureImporter:
       FrauAnimation_13: 1460410808
       FrauAnimation_14: 589543192
       FrauAnimation_15: 1401411337
+      FrauAnimation_16: -317833501
+      FrauAnimation_17: 1597876621
       FrauAnimation_2: 296960155
       FrauAnimation_3: 365396463
       FrauAnimation_4: 408843167

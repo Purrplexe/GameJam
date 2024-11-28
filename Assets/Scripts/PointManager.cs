@@ -5,6 +5,11 @@ using TMPro;
 
 public class PointManager : MonoBehaviour
 {
+    public int GetPoints()
+    {
+        return points;
+    }
+
     public TextMeshProUGUI pointsText; // Drag the PointsText object here in the Inspector
     private int points = 0;
 
