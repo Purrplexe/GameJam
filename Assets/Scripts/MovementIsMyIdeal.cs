@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 public class MovementIsMyIdeal : MonoBehaviour
 {
     public float moveSpeed;
+    public float jumpPower = 8f;
     private Rigidbody2D rb;
     private Vector2 moveDirection;
     public Camera Cam;
@@ -20,13 +22,37 @@ public class MovementIsMyIdeal : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
+    private float horizontal;
+    public bool isFacingRight = true;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+
+    public SpriteRenderer rend;
+    public bool canHide = false;
+    public bool hiding = false;
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
     }
     void Update()
     {
+        horizontal = Input.GetAxisRaw("Horizontal");
+        if(canHide && Input.GetKey("f"))
+        {
+            Physics2D.IgnoreLayerCollision(7, 8, true);
+            rend.sortingOrder = -1;
+            hiding = true;
+            Debug.Log("f in the chat");
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(7, 8, false);
+            rend.sortingOrder = 2;
+            hiding = false;
+        }
+
         if (Input.GetMouseButton(0))
         {
             if (Time.time >= prevShotTime + timeBetweenShots)
@@ -61,6 +87,34 @@ public class MovementIsMyIdeal : MonoBehaviour
         
     }*/
 
+    private void FixedUpdate()
+    {
+        if (!hiding)
+        {
+            //rb.velocity = new Vector2(horizontal,rb.velocity.y);
+            
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("HidingSpot"))
+        {
+            canHide = true;
+            Debug.Log("In");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("HidingSpot"))
+        {
+            canHide = false;
+            Debug.Log("Out");
+        }
+    }
     void ProccessInputs()
     {
         Vector3 playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
@@ -69,7 +123,15 @@ public class MovementIsMyIdeal : MonoBehaviour
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0, 0, angle + offSet);
-
+        if (Input.GetButtonDown("Jump") && isGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        }
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+        Flip();
         /* if(Input.GetMouseButtonDown(0))
          {
              if(Time.time > nextShotTime)
@@ -88,6 +150,20 @@ public class MovementIsMyIdeal : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    private bool isGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+    private void Flip()
+    {
+        if(isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
     /*void Move()
