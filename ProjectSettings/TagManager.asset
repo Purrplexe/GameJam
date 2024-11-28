@@ -9,6 +9,8 @@ TagManager:
   - GoodItem
   - BadItem
   - timerText
+  - Chain
+  - Icicle
   layers:
   - Default
   - TransparentFX
