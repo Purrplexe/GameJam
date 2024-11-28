@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dialogue
 {
     public int id;
-    public Dictionary<string, int> answerNavigation = new Dictionary<string, int>();
+    public Dictionary<string, int> answerNavigation;
     public string text;
     public Sprite character1;
     public Sprite character2;

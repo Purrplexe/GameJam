@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Conversation1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueFlow
-  flowName: 
-  Dialogues: []
+  Dialogues:
+  - id: 0
+    text: 
+    character1: {fileID: 0}
+    character2: {fileID: 0}
+    char1Talking: 0
