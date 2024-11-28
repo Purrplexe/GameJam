@@ -45,7 +45,10 @@ public class MovementIsMyIdeal : MonoBehaviour
         if(canHide && Input.GetKey("f"))
         {
             Physics2D.IgnoreLayerCollision(7, 8, true);
-            rend.sortingOrder = -1;
+            foreach (var spriteRenderer in GetComponentsInChildren<SpriteRenderer>())
+            {
+                spriteRenderer.sortingOrder = -1;
+            }
             hiding = true;
             moveSpeed = 0f;
             Debug.Log("f in the chat");
@@ -53,7 +56,10 @@ public class MovementIsMyIdeal : MonoBehaviour
         else
         {
             Physics2D.IgnoreLayerCollision(7, 8, false);
-            rend.sortingOrder = 2;
+            foreach (var spriteRenderer in GetComponentsInChildren<SpriteRenderer>())
+            {
+                spriteRenderer.sortingOrder = 2;
+            }
             hiding = false;
             moveSpeed = speedHolder;
         }
@@ -125,7 +131,12 @@ public class MovementIsMyIdeal : MonoBehaviour
     {
         Vector3 playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         transform.position += playerInput.normalized * moveSpeed * Time.deltaTime;
-
+        if (playerInput != Vector3.zero) {
+            GetComponentInChildren<Animator>().SetBool("isWalking", true);
+        } else
+        {
+        GetComponentInChildren<Animator>().SetBool("isWalking", false);
+        }
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0, 0, angle + offSet);
