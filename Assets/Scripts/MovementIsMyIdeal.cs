@@ -32,12 +32,15 @@ public class MovementIsMyIdeal : MonoBehaviour
     public bool canHide = false;
     public bool hiding = false;
     public float speedHolder;
+    public LevelLoader loader;
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
         speedHolder = moveSpeed;
+        loader.LoadonDelay("Kallikantzari", 20);
+
     }
     void Update()
     {

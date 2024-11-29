@@ -29,10 +29,10 @@ public class LevelLoader : MonoBehaviour
         f();
     }
 
-    public void LoadonDelay(string levelName)
+    public void LoadonDelay(string levelName, float delay)
     {
         //loads next level after 10s
-        StartCoroutine(InvokeDelay(() => LoadLevel(""), 10));
+        StartCoroutine(InvokeDelay(() => LoadLevel(levelName), delay));
     }
 
     // Call this to start the scene transition
