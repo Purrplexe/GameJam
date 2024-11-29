@@ -12,6 +12,7 @@ public class TimerManager : MonoBehaviour
     public TextMeshProUGUI dialogueText; // Reference to the Text component
     public GameObject frauPerchta; // Reference to Frau Perchta
     public Animator frauAnimator; // Reference to the Animator component on Frau Perchta
+    public LevelLoader levelLoader; // Reference to the LevelLoader
 
     private bool timerRunning = false;
     private bool animationPlayed = false; // New variable to ensure animation plays once
@@ -55,5 +56,6 @@ public class TimerManager : MonoBehaviour
         {
             dialogueText.text = "Pathetic. I expected nothing less. The weak do not reach home unscathed. Run, and pray the next trial grants you mercy.";
         }
+        LevelLoader.Instance.LoadLevel("SecondTransition");
     }
 }
