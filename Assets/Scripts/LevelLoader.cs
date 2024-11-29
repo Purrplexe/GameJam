@@ -22,6 +22,19 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+
+    private static IEnumerator InvokeDelay(System.Action f, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        f();
+    }
+
+    public void LoadonDelay(string levelName)
+    {
+        //loads next level after 10s
+        StartCoroutine(InvokeDelay(() => LoadLevel(""), 10));
+    }
+
     // Call this to start the scene transition
     public void LoadLevel(string levelName)
     {
