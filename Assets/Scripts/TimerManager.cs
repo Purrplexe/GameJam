@@ -56,6 +56,6 @@ public class TimerManager : MonoBehaviour
         {
             dialogueText.text = "Pathetic. I expected nothing less. The weak do not reach home unscathed. Run, and pray the next trial grants you mercy.";
         }
-        LevelLoader.Instance.LoadLevel("SecondTransition");
+        LevelLoader.Instance.LoadonDelay("SecondTransition", 5);
     }
 }
