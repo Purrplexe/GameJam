@@ -383,7 +383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1900594586}
+      - m_Target: {fileID: 553424235}
         m_TargetAssemblyTypeName: SpiritManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
@@ -1201,21 +1201,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7555531577346168708, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1931507140}
+    - target: {fileID: 7555531577346168708, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7828768630771371981, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7828768630771371981, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.048408672
       objectReference: {fileID: 0}
     - target: {fileID: 7828768630771371981, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.048408672
       objectReference: {fileID: 0}
     - target: {fileID: 7828768630771371981, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.04905659
       objectReference: {fileID: 0}
     - target: {fileID: 8640512761701559256, guid: b77e5ea578f05ec42b76456e1b0676fc, type: 3}
       propertyPath: m_Name
@@ -3158,11 +3166,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6350594011846867066, guid: aba608c707e2d8c459e96e9a2d6ec7b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.37
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 6350594011846867066, guid: aba608c707e2d8c459e96e9a2d6ec7b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 6350594011846867066, guid: aba608c707e2d8c459e96e9a2d6ec7b1, type: 3}
       propertyPath: m_LocalPosition.z

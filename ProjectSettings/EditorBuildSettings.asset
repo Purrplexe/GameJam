@@ -18,15 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/FrauPerchtaGame.unity
     guid: ef453a59cfea21342be2333829c7a27b
   - enabled: 1
+    path: Assets/Scenes/SecondTransition.unity
+    guid: 6736b8135068e5647a7a7d5ea4c00965
+  - enabled: 1
     path: Assets/Scenes/KrampusGame.unity
     guid: e46f1b0e437f3bd4f8904f430f9b46f0
+  - enabled: 1
+    path: Assets/Scenes/ThirdTransition.unity
+    guid: 75882ba5a8824744e8dc82e65f4a45cf
   - enabled: 1
     path: Assets/Scenes/WeBUsting.unity
     guid: da0c10a091a3a1a4f83f0beaf516c4da
   - enabled: 1
     path: Assets/Scenes/Kallikantzari.unity
     guid: 5fd51af6e1400d749a1fb5e47f1b012f
-  - enabled: 0
-    path: Assets/Scenes/SecondTransition.unity
-    guid: 6736b8135068e5647a7a7d5ea4c00965
   m_configObjects: {}

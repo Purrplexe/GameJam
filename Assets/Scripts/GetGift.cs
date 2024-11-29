@@ -26,7 +26,12 @@ public class GetGift : MonoBehaviour
                 spiritManager.AddSpirit(10f); // Add spirit points
                 spiritManager.CollectGift(); // Increment gift count
             }
-            Destroy(gameObject); // Remove the gift
+            else
+            {
+                Debug.LogWarning("SpiritManager is missing!");
+            }
+
+            Destroy(gameObject); // Remove the gift object
         }
     }
 }

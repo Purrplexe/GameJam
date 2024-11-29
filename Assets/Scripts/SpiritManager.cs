@@ -23,12 +23,23 @@ public class SpiritManager : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0f; // Pause the game at the start
+        Time.timeScale = 1f; // Start the game
         dialogueBox.SetActive(true); // Show the dialogue box
-        // Set the initial slider values
+
+        // Set initial slider values
         currentSpirit = maxSpirit;
         spiritSlider.maxValue = maxSpirit;
         spiritSlider.value = currentSpirit;
+
+        // Assign loader dynamically if not already assigned
+        if (loader == null)
+        {
+            loader = FindObjectOfType<LevelLoader>();
+            if (loader == null)
+            {
+                Debug.LogError("LevelLoader not found in the scene!");
+            }
+        }
 
         ShowPreGameDialogue();
     }
@@ -80,6 +91,7 @@ public class SpiritManager : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueText.text = "You stand tall, even under the lash. Perhaps there’s strength in you yet. Go… but know that the weight you carry is far from lifted.";
         Debug.Log("You won the game!");
+        Debug.Log($"Loader is assigned: {loader != null}");
         loader.LoadonDelay("ThirdTransition", 5);
 
     }

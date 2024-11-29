@@ -15,6 +15,7 @@ public class LevelLoader : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -31,6 +32,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadonDelay(string levelName, float delay)
     {
+        Debug.Log($"Loading {levelName} after {delay} seconds.");
         //loads next level after 10s
         StartCoroutine(InvokeDelay(() => LoadLevel(levelName), delay));
     }
