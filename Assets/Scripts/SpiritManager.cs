@@ -13,6 +13,7 @@ public class SpiritManager : MonoBehaviour
     public TextMeshProUGUI dialogueText; // Reference to the dialogue box text component
     public int totalGifts = 5; // Total number of gifts to collect
     private int giftsCollected = 0;
+    public LevelLoader loader;
 
     public void StartGame()
     {
@@ -70,6 +71,7 @@ public class SpiritManager : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueText.text = "Weakness. It’s a wonder you’ve made it this far. Go on, crawl to your fate. Perhaps others will have mercy where I will not.";
         Debug.Log("Game Over! Your spirit has run out.");
+        loader.LoadonDelay("KrampusGame", 5);
     }
 
     private void WinGame()
@@ -78,5 +80,7 @@ public class SpiritManager : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueText.text = "You stand tall, even under the lash. Perhaps there’s strength in you yet. Go… but know that the weight you carry is far from lifted.";
         Debug.Log("You won the game!");
+        loader.LoadonDelay("ThirdTransition", 5);
+
     }
 }
